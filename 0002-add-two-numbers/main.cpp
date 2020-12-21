@@ -44,8 +44,8 @@ public:
                 // 取余数
                 int mod = sum % 10;
                 phead->val = mod;
-                phead->next = new ListNode;
-                phead->next->val = 1;
+                phead->next = new ListNode(1);
+//                phead->next->val = 1;
             } else {
                 phead->val = sum;
                 if ((l1 != NULL && l1->next != NULL) || (l2 != NULL && l2->next != NULL)) {
