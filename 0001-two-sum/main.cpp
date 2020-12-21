@@ -13,11 +13,11 @@ public:
         multimap<int, int> numMap;
         size_t maxSize = nums.size();
         for (size_t i = 0; i < maxSize; ++i) {
-            numMap.insert(pair<int,int>(nums[i], i));
+            numMap.insert(pair<int, int>(nums[i], i));
         }
         vector<int> ret;
-        for (map<int,int>::reverse_iterator it = numMap.rbegin(); it != numMap.rend(); ++it) {
-            map<int,int>::iterator findIt = numMap.find(target - it->first);
+        for (map<int, int>::reverse_iterator it = numMap.rbegin(); it != numMap.rend(); ++it) {
+            map<int, int>::iterator findIt = numMap.find(target - it->first);
 
             if (findIt != numMap.end() and it->second != findIt->second) {
                 ret.push_back(findIt->second);
@@ -38,5 +38,5 @@ int main() {
 //    vector<int> nums = {3, 3};
 //    int target = 6;
     vector<int> ret = s.twoSum(nums, target);
-    for_each(ret.begin(), ret.end(), [](int value){cout << value << " ";});
+    for_each(ret.begin(), ret.end(), [](int value) { cout << value << " "; });
 }

@@ -3,5 +3,8 @@ project(Algorithm_Questions)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Algorithm_Questions
+add_executable(Two_Sum1
         0001-two-sum/main.cpp)
+
+add_executable(Two_Sum2
+        0001-two-sum/main2.cpp)
