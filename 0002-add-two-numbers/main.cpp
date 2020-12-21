@@ -36,58 +36,34 @@ public:
         // 遍历
         ListNode *phead = head;
 
-        while (l1 != NULL && l2 != NULL) {
+        while (l1 != NULL || l2 != NULL || phead != NULL) {
             // 求和
-            int sum = l1->val + l2->val;
+            int sum = (l1 == NULL ? 0 : l1->val) + (l2 == NULL ? 0 : l2->val) + (phead == NULL ? 0 : phead->val);
             // 除10
             if (sum >= 10) {
                 // 取余数
                 int mod = sum % 10;
-                phead->val += mod;
+                phead->val = mod;
                 phead->next = new ListNode;
-                phead->next->val += 1;
+                phead->next->val = 1;
             } else {
-                phead->val += sum;
-                if (l1->next != NULL || l2->next != NULL) {
+                phead->val = sum;
+                if ((l1 != NULL && l1->next != NULL) || (l2 != NULL && l2->next != NULL)) {
                     phead->next = new ListNode;
                 }
             }
-            phead = phead->next;
 
-            l1 = l1->next;
-            l2 = l2->next;
-        }
-
-        while (l1 != NULL) {
-            int tmp = phead->val + l1->val;
-            if (tmp >= 10) {
-                phead->val = tmp % 10;
-                phead->next = new ListNode;
-                phead->next->val += 1;
-            } else {
-                phead->val = tmp;
-                if (l1->next != NULL) {
-                    phead->next = new ListNode;
-                }
+            if (phead != NULL) {
+                phead = phead->next;
             }
-            phead = phead->next;
-            l1 = l1->next;
-        }
 
-        while (l2 != NULL) {
-            int tmp = phead->val + l2->val;
-            if (tmp >= 10) {
-                phead->val = tmp % 10;
-                phead->next = new ListNode;
-                phead->next->val += 1;
-            } else {
-                phead->val = tmp;
-                if (l2->next != NULL) {
-                    phead->next = new ListNode;
-                }
+            if (l1 != NULL) {
+                l1 = l1->next;
             }
-            phead = phead->next;
-            l2 = l2->next;
+
+            if (l2 != NULL) {
+                l2 = l2->next;
+            }
         }
         return head;
     }
@@ -95,11 +71,17 @@ public:
 
 int main() {
     Solution s;
-    vector<int> v1 = {2, 4, 3};
-    vector<int> v2 = {5, 6, 9, 9};
+//    vector<int> v1 = {2, 4, 3};
+//    vector<int> v2 = {5, 6, 9, 9};
 
 //    vector<int> v1 = {9, 9, 9, 9, 9, 9, 9};
 //    vector<int> v2 = {9, 9, 9, 9};
+
+//    vector<int> v1 = {3, 7};
+//    vector<int> v2 = {9, 2};
+
+    vector<int> v1 = {1, 6, 0, 3, 3, 6, 7, 2, 0, 1};
+    vector<int> v2 = {6, 3, 0, 8, 9, 6, 6, 9, 6, 1};
 
     ListNode *head1 = new ListNode;
     ListNode *l1 = head1;
