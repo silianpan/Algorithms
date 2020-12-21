@@ -33,37 +33,33 @@ public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
         // 头部指针
         ListNode *head = new ListNode;
-        // 遍历
-        ListNode *phead = head;
+        ListNode *tail = head;
+        // 进位数
+        int carry = 0;
 
-        while (l1 != NULL || l2 != NULL || phead != NULL) {
-            // 求和
-            int sum = (l1 == NULL ? 0 : l1->val) + (l2 == NULL ? 0 : l2->val) + (phead == NULL ? 0 : phead->val);
-            // 除10
-            if (sum >= 10) {
-                // 取余数
-                int mod = sum % 10;
-                phead->val = mod;
-                phead->next = new ListNode(1);
-//                phead->next->val = 1;
-            } else {
-                phead->val = sum;
-                if ((l1 != NULL && l1->next != NULL) || (l2 != NULL && l2->next != NULL)) {
-                    phead->next = new ListNode;
-                }
+        while (l1 || l2) {
+            // 求和+进位数
+            int sum = (l1 ? l1->val : 0) + (l2 ? l2->val : 0) + carry;
+
+            carry = sum / 10;
+            // 余数
+            tail->val = sum % 10;
+            // next新建
+            if ((l1 && l1->next) || (l2 && l2->next)) {
+                tail->next = new ListNode;
+                tail = tail->next;
             }
 
-            if (phead != NULL) {
-                phead = phead->next;
-            }
-
-            if (l1 != NULL) {
+            if (l1) {
                 l1 = l1->next;
             }
 
-            if (l2 != NULL) {
+            if (l2) {
                 l2 = l2->next;
             }
+        }
+        if (carry) {
+            tail->next = new ListNode(carry);
         }
         return head;
     }
@@ -71,8 +67,8 @@ public:
 
 int main() {
     Solution s;
-//    vector<int> v1 = {2, 4, 3};
-//    vector<int> v2 = {5, 6, 9, 9};
+    vector<int> v1 = {2, 4, 3};
+    vector<int> v2 = {5, 6, 9, 9};
 
 //    vector<int> v1 = {9, 9, 9, 9, 9, 9, 9};
 //    vector<int> v2 = {9, 9, 9, 9};
@@ -80,8 +76,8 @@ int main() {
 //    vector<int> v1 = {3, 7};
 //    vector<int> v2 = {9, 2};
 
-    vector<int> v1 = {1, 6, 0, 3, 3, 6, 7, 2, 0, 1};
-    vector<int> v2 = {6, 3, 0, 8, 9, 6, 6, 9, 6, 1};
+//    vector<int> v1 = {1, 6, 0, 3, 3, 6, 7, 2, 0, 1};
+//    vector<int> v2 = {6, 3, 0, 8, 9, 6, 6, 9, 6, 1};
 
     ListNode *head1 = new ListNode;
     ListNode *l1 = head1;
