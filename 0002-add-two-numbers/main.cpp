@@ -44,10 +44,8 @@ public:
                 // 取余数
                 int mod = sum % 10;
                 phead->val += mod;
-                if (l1->next != NULL || l2->next != NULL) {
-                    phead->next = new ListNode;
-                    phead->next->val += 1;
-                }
+                phead->next = new ListNode;
+                phead->next->val += 1;
             } else {
                 phead->val += sum;
                 if (l1->next != NULL || l2->next != NULL) {
@@ -61,23 +59,36 @@ public:
         }
 
         while (l1 != NULL) {
-            phead->val = l1->val;
-            if (l1->next != NULL) {
+            int tmp = phead->val + l1->val;
+            if (tmp >= 10) {
+                phead->val = tmp % 10;
                 phead->next = new ListNode;
+                phead->next->val += 1;
+            } else {
+                phead->val = tmp;
+                if (l1->next != NULL) {
+                    phead->next = new ListNode;
+                }
             }
             phead = phead->next;
             l1 = l1->next;
         }
 
         while (l2 != NULL) {
-            phead->val = l2->val;
-            if (l2->next != NULL) {
+            int tmp = phead->val + l2->val;
+            if (tmp >= 10) {
+                phead->val = tmp % 10;
                 phead->next = new ListNode;
+                phead->next->val += 1;
+            } else {
+                phead->val = tmp;
+                if (l2->next != NULL) {
+                    phead->next = new ListNode;
+                }
             }
             phead = phead->next;
             l2 = l2->next;
         }
-
         return head;
     }
 };
@@ -85,7 +96,10 @@ public:
 int main() {
     Solution s;
     vector<int> v1 = {2, 4, 3};
-    vector<int> v2 = {5, 6, 4, 1};
+    vector<int> v2 = {5, 6, 9, 9};
+
+//    vector<int> v1 = {9, 9, 9, 9, 9, 9, 9};
+//    vector<int> v2 = {9, 9, 9, 9};
 
     ListNode *head1 = new ListNode;
     ListNode *l1 = head1;
