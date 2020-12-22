@@ -3,14 +3,17 @@ project(Algorithm_Questions)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(0001_Two_Sum1
+add_executable(0001-two-sum1
         0001-two-sum/main.cpp)
 
-add_executable(0001_Two_Sum2
+add_executable(0001-two-sum2
         0001-two-sum/main2.cpp)
 
-add_executable(0002_Add_Two_Numbers1
+add_executable(0002-add-two-numbers1
         0002-add-two-numbers/main.cpp)
 
-add_executable(0002_Add_Two_Numbers2
+add_executable(0002-add-two-numbers2
         0002-add-two-numbers/main2.cpp)
+
+add_executable(0003-longest-substring-without-repeating-characters
+        0003-longest-substring-without-repeating-characters/main.cpp)
