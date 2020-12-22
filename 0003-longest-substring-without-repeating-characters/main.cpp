@@ -26,7 +26,9 @@ public:
             } else {
                 // 没有找到重复
                 ret.insert(pair<char, int>(s[i], i));
-                retLen = ret.size();
+                if (ret.size() > retLen) {
+                    retLen = ret.size();
+                }
             }
         }
         tmp.clear();
@@ -37,6 +39,6 @@ public:
 
 int main() {
     Solution s;
-    int ret = s.lengthOfLongestSubstring("dvdf");
+    int ret = s.lengthOfLongestSubstring("nfpdmpi");
     cout << ret << endl;
 }
