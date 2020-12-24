@@ -17,3 +17,6 @@ add_executable(0002-add-two-numbers2
 
 add_executable(0003-longest-substring-without-repeating-characters
         0003-longest-substring-without-repeating-characters/main.cpp)
+
+add_executable(0004-median-of-two-sorted-arrays
+        0004-median-of-two-sorted-arrays/main.cpp)
