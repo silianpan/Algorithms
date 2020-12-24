@@ -37,6 +37,9 @@ public:
         size_t s = s1 + s2;
         size_t s3 = s / 2;
 
+        /**
+         * 解题方法：同时遍历两个数组，按从小到大保存至ret中，当ret的大小等于中间索引s3+1，跳出循环
+         */
         vector<int> ret;
         size_t flag = 0;
         bool retFlag = false;
@@ -66,20 +69,27 @@ public:
             }
         }
 
+        /**
+         * 当ret的大小还不满足中间索引s3+1时，添加nums1或者nums2中的数目
+         */
         if (ret.size() < s3 + 1) {
             size_t curSize = ret.size();
             if (flag <= s2 - 1) {
+                // 遍历添加nums2中的数
                 for (size_t k = flag; k < s3 + 1 - curSize + flag; ++k) {
                     ret.push_back(nums2[k]);
                 }
             } else if (i < s1) {
+                // 遍历添加nums1中的数
                 for (size_t k = i; k < s3 + 1 - curSize + i; ++k) {
                     ret.push_back(nums1[k]);
                 }
             }
         }
 
-
+        /**
+         * 最后判断总大小奇偶，返回中位数
+         */
         if (s % 2 == 0) {
             // 总大小为偶数
             return (ret[s3 - 1] + ret[s3]) / 2.0;
