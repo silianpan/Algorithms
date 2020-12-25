@@ -20,3 +20,6 @@ add_executable(0003-longest-substring-without-repeating-characters
 
 add_executable(0004-median-of-two-sorted-arrays
         0004-median-of-two-sorted-arrays/main.cpp)
+
+add_executable(0005-longest-palindromic-substring
+        0005-longest-palindromic-substring/main.cpp)
