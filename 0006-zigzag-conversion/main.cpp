@@ -10,6 +10,9 @@ using namespace std;
 class Solution {
 public:
     string convert(string s, int numRows) {
+        // 如果为1，直接返回原字符串
+        if (numRows == 1) return s;
+
         // 1. 计算分配二维数组空间
         // 以z字竖线字符数+中间字符数作为一次循环，计算列数
         int len = s.length();
