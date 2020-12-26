@@ -10,12 +10,12 @@ using namespace std;
 class Solution {
 public:
     string convert(string s, int numRows) {
+        int len = s.length();
         // 如果为1，直接返回原字符串
-        if (numRows == 1) return s;
+        if (numRows <= 1 || numRows >= len) return s;
 
         // 1. 计算分配二维数组空间
         // 以z字竖线字符数+中间字符数作为一次循环，计算列数
-        int len = s.length();
         int columns = (len / (2 * numRows - 2)) * (numRows - 1);
         // 如果 除以 （z字竖线字符数+中间字符数）有余数，则最终列数+1
         if (len % (2 * numRows - 2) != 0) {
