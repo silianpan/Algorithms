@@ -24,6 +24,9 @@ add_executable(0004-median-of-two-sorted-arrays
 add_executable(0005-longest-palindromic-substring
         0005-longest-palindromic-substring/main.cpp)
 
+add_executable(0006-zigzag-conversion
+        0006-zigzag-conversion/main.cpp)
+
 add_executable(0007-reverse-integer
         0007-reverse-integer/main.cpp)
 
