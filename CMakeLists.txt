@@ -32,3 +32,6 @@ add_executable(0007-reverse-integer
 
 add_executable(0007-reverse-integer2
         0007-reverse-integer/main2.cpp)
+
+add_executable(0008-string-to-integer-atoi
+        0008-string-to-integer-atoi/main.cpp)
