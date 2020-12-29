@@ -35,3 +35,6 @@ add_executable(0007-reverse-integer2
 
 add_executable(0008-string-to-integer-atoi
         0008-string-to-integer-atoi/main.cpp)
+
+add_executable(0009-palindrome-number
+        0009-palindrome-number/main.cpp)
