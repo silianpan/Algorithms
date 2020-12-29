@@ -38,3 +38,6 @@ add_executable(0008-string-to-integer-atoi
 
 add_executable(0009-palindrome-number
         0009-palindrome-number/main.cpp)
+
+add_executable(0010-regular-expression-matching
+        0010-regular-expression-matching/main.cpp)
