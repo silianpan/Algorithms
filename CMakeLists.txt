@@ -41,3 +41,9 @@ add_executable(0009-palindrome-number
 
 add_executable(0010-regular-expression-matching
         0010-regular-expression-matching/main.cpp)
+
+add_executable(0011-container-with-most-water
+        0011-container-with-most-water/main.cpp)
+
+add_executable(0011-container-with-most-water2
+        0011-container-with-most-water/main2.cpp)
