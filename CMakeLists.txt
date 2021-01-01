@@ -47,3 +47,6 @@ add_executable(0011-container-with-most-water
 
 add_executable(0011-container-with-most-water2
         0011-container-with-most-water/main2.cpp)
+
+add_executable(0012-integer-to-roman
+        0012-integer-to-roman/main.cpp)
