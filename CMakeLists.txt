@@ -50,3 +50,6 @@ add_executable(0011-container-with-most-water2
 
 add_executable(0012-integer-to-roman
         0012-integer-to-roman/main.cpp)
+
+add_executable(0013-roman-to-integer
+        0013-roman-to-integer/main.cpp)
