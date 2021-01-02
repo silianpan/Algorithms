@@ -7,6 +7,9 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(NC0078
         0-nowcoder/NC0078/main.cpp)
 
+add_executable(NC0119
+        0-nowcoder/NC0119/main.cpp)
+
 # leetcode
 add_executable(0001-two-sum1
         0001-two-sum/main.cpp)
