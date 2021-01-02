@@ -58,3 +58,6 @@ add_executable(0012-integer-to-roman
 
 add_executable(0013-roman-to-integer
         0013-roman-to-integer/main.cpp)
+
+add_executable(0014-longest-common-prefix
+        0014-longest-common-prefix/main.cpp)
