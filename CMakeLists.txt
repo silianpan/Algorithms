@@ -64,3 +64,9 @@ add_executable(0013-roman-to-integer
 
 add_executable(0014-longest-common-prefix
         0014-longest-common-prefix/main.cpp)
+
+add_executable(0015-3sum
+        0015-3sum/main.cpp)
+
+add_executable(0015-3sum2
+        0015-3sum/main2.cpp)
