@@ -79,3 +79,6 @@ add_executable(0015-3sum2
 
 add_executable(0016-3sum-closest
         0016-3sum-closest/main.cpp)
+
+add_executable(0016-3sum-closest2
+        0016-3sum-closest/main2.cpp)
