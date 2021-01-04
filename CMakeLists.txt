@@ -13,6 +13,9 @@ add_executable(NC0119
 add_executable(NC0045
         0-nowcoder/NC0045/main.cpp)
 
+add_executable(NC0061
+        0-nowcoder/NC0061/main.cpp)
+
 # leetcode
 add_executable(0001-two-sum1
         0001-two-sum/main.cpp)
@@ -73,3 +76,6 @@ add_executable(0015-3sum
 
 add_executable(0015-3sum2
         0015-3sum/main2.cpp)
+
+add_executable(0016-3sum-closest
+        0016-3sum-closest/main.cpp)
