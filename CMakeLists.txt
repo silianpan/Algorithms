@@ -16,6 +16,9 @@ add_executable(NC0045
 add_executable(NC0061
         0-nowcoder/NC0061/main.cpp)
 
+add_executable(NC0088
+        0-nowcoder/NC0088/main.cpp)
+
 # leetcode
 add_executable(0001-two-sum1
         0001-two-sum/main.cpp)
@@ -82,3 +85,6 @@ add_executable(0016-3sum-closest
 
 add_executable(0016-3sum-closest2
         0016-3sum-closest/main2.cpp)
+
+add_executable(0017-letter-combinations-of-a-phone-number
+        0017-letter-combinations-of-a-phone-number/main.cpp)
