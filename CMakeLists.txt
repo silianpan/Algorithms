@@ -91,3 +91,6 @@ add_executable(0016-3sum-closest2
 
 add_executable(0017-letter-combinations-of-a-phone-number
         0017-letter-combinations-of-a-phone-number/main.cpp)
+
+add_executable(0018-4sum
+        0018-4sum/main.cpp)
