@@ -63,3 +63,5 @@ add_executable(0018-4sum 0018-4sum/main.cpp)
 
 add_executable(0019-remove-nth-node-from-end-of-list 0019-remove-nth-node-from-end-of-list/main.cpp)
 add_executable(0019-remove-nth-node-from-end-of-list2 0019-remove-nth-node-from-end-of-list/main2.cpp)
+
+add_executable(0020-valid-parentheses 0020-valid-parentheses/main.cpp)
