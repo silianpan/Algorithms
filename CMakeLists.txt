@@ -65,3 +65,6 @@ add_executable(0019-remove-nth-node-from-end-of-list 0019-remove-nth-node-from-e
 add_executable(0019-remove-nth-node-from-end-of-list2 0019-remove-nth-node-from-end-of-list/main2.cpp)
 
 add_executable(0020-valid-parentheses 0020-valid-parentheses/main.cpp)
+
+add_executable(0021-merge-two-sorted-lists 0021-merge-two-sorted-lists/main.cpp)
+add_executable(0021-merge-two-sorted-lists2 0021-merge-two-sorted-lists/main2.cpp)
