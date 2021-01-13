@@ -5,19 +5,15 @@ set(CMAKE_CXX_STANDARD 14)
 
 # nowcoder
 add_executable(NC0078 0-nowcoder/NC0078/main.cpp)
-
 add_executable(NC0119 0-nowcoder/NC0119/main.cpp)
-
 add_executable(NC0045 0-nowcoder/NC0045/main.cpp)
-
 add_executable(NC0061 0-nowcoder/NC0061/main.cpp)
-
 add_executable(NC0088 0-nowcoder/NC0088/main.cpp)
 add_executable(NC00882 0-nowcoder/NC0088/main2.cpp)
-
 add_executable(NC0112 0-nowcoder/NC0112/main.cpp)
 add_executable(NC0105 0-nowcoder/NC0105/main.cpp)
 add_executable(NC0022 0-nowcoder/NC0022/main.cpp)
+add_executable(NC0072 0-nowcoder/NC0072/main.cpp)
 
 # leetcode
 add_executable(0001-two-sum1 0001-two-sum/main.cpp)
@@ -69,3 +65,5 @@ add_executable(0020-valid-parentheses 0020-valid-parentheses/main.cpp)
 
 add_executable(0021-merge-two-sorted-lists 0021-merge-two-sorted-lists/main.cpp)
 add_executable(0021-merge-two-sorted-lists2 0021-merge-two-sorted-lists/main2.cpp)
+
+add_executable(0022-generate-parentheses 0022-generate-parentheses/main.cpp)
