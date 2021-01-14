@@ -14,6 +14,7 @@ add_executable(NC0112 0-nowcoder/NC0112/main.cpp)
 add_executable(NC0105 0-nowcoder/NC0105/main.cpp)
 add_executable(NC0022 0-nowcoder/NC0022/main.cpp)
 add_executable(NC0072 0-nowcoder/NC0072/main.cpp)
+add_executable(NC0068 0-nowcoder/NC0068/main.cpp)
 
 # leetcode
 add_executable(0001-two-sum1 0001-two-sum/main.cpp)
