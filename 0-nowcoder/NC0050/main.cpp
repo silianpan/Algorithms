@@ -72,7 +72,7 @@ public:
     /**
      * 反转链表
      * @param head
-     * @return
+     * @return 返回反转后的链表首位
      */
     ListNode* reverseKGroup(ListNode* head) {
         ListNode *pre = nullptr;
@@ -84,6 +84,7 @@ public:
             pre = cur;
             cur = nex;
         }
+        // 返回反转后的链表首位
         return pre;
     }
 };
