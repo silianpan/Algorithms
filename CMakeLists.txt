@@ -17,6 +17,7 @@ add_executable(NC0072 0-nowcoder/NC0072/main.cpp)
 add_executable(NC0068 0-nowcoder/NC0068/main.cpp)
 add_executable(NC0012 0-nowcoder/NC0012/main.cpp)
 add_executable(NC0050 0-nowcoder/NC0050/main.cpp)
+add_executable(NC0004 0-nowcoder/NC0004/main.cpp)
 
 # leetcode
 add_executable(0001-two-sum1 0001-two-sum/main.cpp)
@@ -51,3 +52,4 @@ add_executable(0021-merge-two-sorted-lists2 0021-merge-two-sorted-lists/main2.cp
 add_executable(0022-generate-parentheses 0022-generate-parentheses/main.cpp)
 add_executable(0023-merge-k-sorted-lists 0023-merge-k-sorted-lists/main.cpp)
 add_executable(0024-swap-nodes-in-pairs 0024-swap-nodes-in-pairs/main.cpp)
+add_executable(0025-reverse-nodes-in-k-group 0025-reverse-nodes-in-k-group/main.cpp)
