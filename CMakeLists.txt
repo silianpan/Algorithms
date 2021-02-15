@@ -59,3 +59,4 @@ add_executable(0026-remove-duplicates-from-sorted-array 0026-remove-duplicates-f
 add_executable(0026-remove-duplicates-from-sorted-array2 0026-remove-duplicates-from-sorted-array/main2.cpp)
 add_executable(0027-remove-element 0027-remove-element/main.cpp)
 add_executable(0027-remove-element2 0027-remove-element/main2.cpp)
+add_executable(0028-implement-strstr 0028-implement-strstr/main.cpp)
