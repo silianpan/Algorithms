@@ -28,6 +28,12 @@ public:
     int divide(int dividend, int divisor) {
         // 特例
         if (dividend == 0 || divisor == 0) return 0;
+        if (divisor == 1) return dividend;
+        if (divisor == -1) {
+            if (dividend == INT_MIN) return INT_MAX;
+            else if (dividend == INT_MAX) return INT_MIN;
+            else return -dividend;
+        }
         // 判断符号是否相同
         bool flag = (dividend > 0 && divisor > 0) || (dividend <= 0 && divisor <= 0);
         // 全部取正，不能取反，会溢出，比如INT_MIN
