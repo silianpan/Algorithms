@@ -6,7 +6,7 @@ leetcode 402 移掉 K 位数字
 */
 
 #include <iostream>
-#include <queue>
+#include <stack>
 using namespace std;
 
 class Solution {
@@ -17,42 +17,54 @@ public:
     if (k == 0)
       return num;
 
-    queue<char> tmp;
+    stack<char> tmp;
     tmp.push(num[0]);
 
     size_t i = 1;
     int flag = 0;
     while (i < num.size() && flag < k) {
       if (tmp.empty()) {
-        tmp.push(num[i]);
+        if (num[i] != '0') {
+          tmp.push(num[i]);
+        }
         ++i;
         continue;
       }
-      if (num[i] < tmp.back()) {
-        tmp.pop();
-        if (!(tmp.empty() && num[i] == '0')) {
-          tmp.push(num[i]);
+      if (num[i] < tmp.top()) {
+        while (!tmp.empty() && num[i] < tmp.top() && flag < k) {
+          tmp.pop();
+          ++flag;
         }
-        ++flag;
-      } else if (num[i] > tmp.back()) {
-        ++flag;
+      }
+      if (!tmp.empty() || num[i] != '0') {
+        tmp.push(num[i]);
       }
       ++i;
     }
-
-    string s;
-    while (!tmp.empty()) {
-      s.push_back(tmp.front());
-      tmp.pop();
+    while (flag < k) {
+      if (!tmp.empty()) {
+        tmp.pop();
+      }
+      ++flag;
     }
 
     while (i < num.size()) {
-      if (s.empty() && num[i] == '0') {
-        ++i;
-        continue;
+      if (!tmp.empty() || num[i] != '0') {
+        tmp.push(num[i]);
       }
-      s.push_back(num[i]);
       ++i;
+    }
+
+    // 栈转字符串
+    stack<char> tmpReserve;
+    while (!tmp.empty()) {
+      tmpReserve.push(tmp.top());
+      tmp.pop();
+    }
+    string s;
+    while (!tmpReserve.empty()) {
+      s.push_back(tmpReserve.top());
+      tmpReserve.pop();
     }
     return s.empty() ? "0" : s;
   }
@@ -60,7 +72,7 @@ public:
 
 int main() {
   Solution s;
-  string ret = s.removeKdigits("112", 1);
+  string ret = s.removeKdigits("10001", 4);
   cout << ret << endl;
   return 0;
 }
