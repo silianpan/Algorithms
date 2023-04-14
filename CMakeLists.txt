@@ -64,4 +64,8 @@ add_executable(0029-divide-two-integers 1-leetcode/0029-divide-two-integers/main
 add_executable(0029-divide-two-integers2 1-leetcode/0029-divide-two-integers/main2.cpp)
 
 
+# 天翼云
 add_executable(0004-remove-k-digits 2-ctyun/0004-remove-k-digits/main.cpp)
+add_executable(0006-BM4 2-ctyun/0006-BM4/main.cpp)
+add_executable(0007-BM17 2-ctyun/0007-BM17/main.cpp)
+add_executable(0008-BM83 2-ctyun/0008-BM83/main.cpp)
