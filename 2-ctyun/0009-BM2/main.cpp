@@ -22,18 +22,23 @@ public:
    */
   ListNode *reverseBetween(ListNode *head, int m, int n) {
     // write code here
-    int i = 1, j = 1;
-    ListNode *move = head, *start, *end, *th, *te;
+    int i = 1;
+    ListNode *move = head, *pm_1, *pm, *pn;
     while (move != nullptr) {
-      if (i == m) {
-        start = move;
-        break;
+      if (i == m - 1) {
+        pm_1 = move;
+      } else if (i == m) {
+        pm = move;
       } else if (i == n) {
-        end = move;
+        pn = move;
       }
       move = move->next;
       ++i;
     }
+
+    pm_1->next = pn;
+    ListNode *tmp = pm->next;
+    pm->next = pn->next;
   }
 };
 
